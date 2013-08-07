@@ -1,4 +1,4 @@
-# Nomen
+# Nomen [![Build Status](https://secure.travis-ci.org/abevoelker/nomen.png)](http://travis-ci.org/abevoelker/nomen)
 
 Simple library for formatting (and maybe later, parsing) human names.
 
