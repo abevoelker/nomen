@@ -4,7 +4,7 @@ describe Nomen::Formatters::Inverted do
   context 'formatting a name' do
 
     # name segment combinations were generated with
-    # s = [:first, :middle, :last, :suffix]; s.size.downto(1).map{|i| s.combination(i).to_a}.flatten(1)
+    # f = Nomen::Name::FRAGMENTS; f.size.downto(1).map{|i| f.combination(i).to_a}.flatten(1)
 
     context 'with [:first, :middle, :last, :suffix]' do
       before do
