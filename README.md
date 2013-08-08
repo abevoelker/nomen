@@ -14,7 +14,7 @@ I am aware of the [complexity of][patio11] human names.
 ```ruby
 require 'nomen'
 
-n = Nomen::Name.new(first: 'Katya', middle: 'Verenice', last: 'Voelker', suffix: 'M.D.')
+n = Nomen.new(first: 'Katya', middle: 'Verenice', last: 'Voelker', suffix: 'M.D.')
 n.format # => "Katya Verenice Voelker M.D."
 n.format(:inverted) # => "Voelker, Katya Verenice M.D."
 n.middle = nil

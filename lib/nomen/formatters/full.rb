@@ -1,4 +1,4 @@
-module Nomen
+class Nomen
   module Formatters
     class Full
 

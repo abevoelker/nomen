@@ -1,3 +1,3 @@
-module Nomen
+class Nomen
   VERSION = "0.0.1"
 end

@@ -1,6 +1,6 @@
 Dir[File.expand_path('../formatters/*.rb', __FILE__)].each {|file| require file }
 
-module Nomen
+class Nomen
   module Formatters
     class UnknownFormatterError < StandardError; end
 

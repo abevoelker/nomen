@@ -4,11 +4,11 @@ describe Nomen::Formatters::Full do
   context 'formatting a name' do
 
     # name segment combinations were generated with
-    # f = Nomen::Name::FRAGMENTS; f.size.downto(1).map{|i| f.combination(i).to_a}.flatten(1)
+    # f = Nomen::FRAGMENTS; f.size.downto(1).map{|i| f.combination(i).to_a}.flatten(1)
 
     context 'with [:first, :middle, :last, :suffix]' do
       before do
-        @name = Nomen::Name.new(first: 'Katya', middle: 'Verenice', last: 'Voelker', suffix: 'M.D.')
+        @name = Nomen.new(first: 'Katya', middle: 'Verenice', last: 'Voelker', suffix: 'M.D.')
       end
 
       it 'should format correctly' do
@@ -18,7 +18,7 @@ describe Nomen::Formatters::Full do
 
     context 'with [:first, :middle, :last]' do
       before do
-        @name = Nomen::Name.new(first: 'Katya', middle: 'Verenice', last: 'Voelker')
+        @name = Nomen.new(first: 'Katya', middle: 'Verenice', last: 'Voelker')
       end
 
       it 'should format correctly' do
@@ -28,7 +28,7 @@ describe Nomen::Formatters::Full do
 
     context 'with [:first, :middle, :suffix]' do
       before do
-        @name = Nomen::Name.new(first: 'Katya', middle: 'Verenice', suffix: 'M.D.')
+        @name = Nomen.new(first: 'Katya', middle: 'Verenice', suffix: 'M.D.')
       end
 
       it 'should format correctly' do
@@ -38,7 +38,7 @@ describe Nomen::Formatters::Full do
 
     context 'with [:first, :last, :suffix]' do
       before do
-        @name = Nomen::Name.new(first: 'Katya', last: 'Voelker', suffix: 'M.D.')
+        @name = Nomen.new(first: 'Katya', last: 'Voelker', suffix: 'M.D.')
       end
 
       it 'should format correctly' do
@@ -48,7 +48,7 @@ describe Nomen::Formatters::Full do
 
     context 'with [:middle, :last, :suffix]' do
       before do
-        @name = Nomen::Name.new(middle: 'Verenice', last: 'Voelker', suffix: 'M.D.')
+        @name = Nomen.new(middle: 'Verenice', last: 'Voelker', suffix: 'M.D.')
       end
 
       it 'should format correctly' do
@@ -58,7 +58,7 @@ describe Nomen::Formatters::Full do
 
     context 'with [:first, :middle]' do
       before do
-        @name = Nomen::Name.new(first: 'Katya', middle: 'Verenice')
+        @name = Nomen.new(first: 'Katya', middle: 'Verenice')
       end
 
       it 'should format correctly' do
@@ -68,7 +68,7 @@ describe Nomen::Formatters::Full do
 
     context 'with [:first, :last]' do
       before do
-        @name = Nomen::Name.new(first: 'Katya', last: 'Voelker')
+        @name = Nomen.new(first: 'Katya', last: 'Voelker')
       end
 
       it 'should format correctly' do
@@ -78,7 +78,7 @@ describe Nomen::Formatters::Full do
 
     context 'with [:first, :suffix]' do
       before do
-        @name = Nomen::Name.new(first: 'Katya', suffix: 'M.D.')
+        @name = Nomen.new(first: 'Katya', suffix: 'M.D.')
       end
 
       it 'should format correctly' do
@@ -88,7 +88,7 @@ describe Nomen::Formatters::Full do
 
     context 'with [:middle, :last]' do
       before do
-        @name = Nomen::Name.new(middle: 'Verenice', last: 'Voelker')
+        @name = Nomen.new(middle: 'Verenice', last: 'Voelker')
       end
 
       it 'should format correctly' do
@@ -98,7 +98,7 @@ describe Nomen::Formatters::Full do
 
     context 'with [:middle, :suffix]' do
       before do
-        @name = Nomen::Name.new(middle: 'Verenice', suffix: 'M.D.')
+        @name = Nomen.new(middle: 'Verenice', suffix: 'M.D.')
       end
 
       it 'should format correctly' do
@@ -108,7 +108,7 @@ describe Nomen::Formatters::Full do
 
     context 'with [:last, :suffix]' do
       before do
-        @name = Nomen::Name.new(last: 'Voelker', suffix: 'M.D.')
+        @name = Nomen.new(last: 'Voelker', suffix: 'M.D.')
       end
 
       it 'should format correctly' do
@@ -118,7 +118,7 @@ describe Nomen::Formatters::Full do
 
     context 'with [:first]' do
       before do
-        @name = Nomen::Name.new(first: 'Katya')
+        @name = Nomen.new(first: 'Katya')
       end
 
       it 'should format correctly' do
@@ -128,7 +128,7 @@ describe Nomen::Formatters::Full do
 
     context 'with [:middle]' do
       before do
-        @name = Nomen::Name.new(middle: 'Verenice')
+        @name = Nomen.new(middle: 'Verenice')
       end
 
       it 'should format correctly' do
@@ -138,7 +138,7 @@ describe Nomen::Formatters::Full do
 
     context 'with [:last]' do
       before do
-        @name = Nomen::Name.new(last: 'Voelker')
+        @name = Nomen.new(last: 'Voelker')
       end
 
       it 'should format correctly' do
@@ -148,7 +148,7 @@ describe Nomen::Formatters::Full do
 
     context 'with [:suffix]' do
       before do
-        @name = Nomen::Name.new(suffix: 'M.D.')
+        @name = Nomen.new(suffix: 'M.D.')
       end
 
       it 'should format correctly' do
