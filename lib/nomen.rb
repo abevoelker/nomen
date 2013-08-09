@@ -12,6 +12,10 @@ class Nomen
     Nomen::Formatters.lookup(type).format(self)
   end
 
+  def to_h
+    FRAGMENTS.reduce({}){|a,f| a[f] = send(f); a}
+  end
+
   def ==(other)
     FRAGMENTS.each{|m| return false if self.send(m) != other.send(m)}
     true

@@ -39,4 +39,16 @@ describe Nomen do
       expect(a.format).to eq(a.format(:full))
     end
   end
+
+  context 'to_h' do
+    it 'should convert to hash using FRAGMENTS' do
+      full = Nomen.new(first: 'Katya', middle: 'Verenice', last: 'Voelker', suffix: 'M.D.')
+      expect(full.to_h).to eq({first: 'Katya', middle: 'Verenice', last: 'Voelker', suffix: 'M.D.'})
+    end
+
+    it 'should save empty fragments as null values' do
+      first = Nomen.new(first: 'Katya')
+      expect(first.to_h).to eq({first: 'Katya', middle: nil, last: nil, suffix: nil})
+    end
+  end
 end
