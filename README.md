@@ -1,15 +1,26 @@
-# Nomen [![Build Status](https://secure.travis-ci.org/abevoelker/nomen.png)](http://travis-ci.org/abevoelker/nomen)
+Nomen
+========
+
+[![Gem Version](https://badge.fury.io/rb/nomen.png)][gem]
+[![Build Status](https://secure.travis-ci.org/abevoelker/nomen.png?branch=master)][travis]
+[![Dependency Status](https://gemnasium.com/abevoelker/nomen.png)][gemnasium]
+
+[gem]: https://rubygems.org/gems/nomen
+[travis]: http://travis-ci.org/abevoelker/nomen
+[gemnasium]: https://gemnasium.com/abevoelker/nomen
 
 Simple library for formatting (and maybe later, parsing) human names.
 
-## Description
+Description
+-----------
 
 The name is latin for "name"; no misandry intended. For now I'm only handling
 my current use case, which is very basic formatting of American-style names.
 
 I am aware of the [complexity of][patio11] human names.
 
-## Synopsis
+Synopsis
+--------
 
 ```ruby
 require 'nomen'
@@ -22,7 +33,8 @@ n.format # => "Katya Voelker M.D."
 n.format(:inverted) # => "Voelker, Katya M.D."
 ```
 
-## Copyright
+Copyright
+---------
 
 Copyright (c) 2013 Abe Voelker. Released under the terms of the MIT license.
 See LICENSE for details.
