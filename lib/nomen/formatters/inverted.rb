@@ -4,22 +4,13 @@ class Nomen
 
       def self.format(name)
         String.new.tap do |str|
+          tail_frags = [:first, :middle, :suffix].map{|f| name.send(f)}
+          tail_str = tail_frags.reject(&:nil?).reject(&:empty?).join(' ')
+
           if name.last && !name.last.empty?
-            if [name.first, name.middle, name.suffix].reject(&:nil?).reject(&:empty?).any?
-              str << "#{name.last},"
-            else
-              str << name.last
-            end
+            str << (tail_str.empty? ? name.last : "#{name.last}, ")
           end
-          if name.first && !name.first.empty?
-            str << (str.empty? ? name.first : " #{name.first}")
-          end
-          if name.middle && !name.middle.empty?
-            str << (str.empty? ? name.middle : " #{name.middle}")
-          end
-          if name.suffix && !name.suffix.empty?
-            str << (str.empty? ? name.suffix : " #{name.suffix}")
-          end
+          str << tail_str unless tail_str.empty?
         end
       end
 
