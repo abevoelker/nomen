@@ -25,12 +25,12 @@ Synopsis
 ```ruby
 require 'nomen'
 
-n = Nomen.new(first: 'Katya', middle: 'Verenice', last: 'Voelker', suffix: 'M.D.')
-n.format # => "Katya Verenice Voelker M.D."
-n.format(:inverted) # => "Voelker, Katya Verenice M.D."
+n = Nomen.new(first: 'John', middle: 'Jacob', last: 'Smith', suffix: 'M.D.')
+n.format # => "John Jacob Smith M.D."
+n.format(:inverted) # => "Smith, John Jacob M.D."
 n.middle = nil
-n.format # => "Katya Voelker M.D."
-n.format(:inverted) # => "Voelker, Katya M.D."
+n.format # => "John Smith M.D."
+n.format(:inverted) # => "Smith, John M.D."
 ```
 
 Copyright
