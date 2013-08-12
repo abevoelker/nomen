@@ -2,9 +2,8 @@ class Nomen
   module Formatters
     class Full
 
-      def self.format(name)
-        frags = [:first, :middle, :last, :suffix].map{|f| name.send(f)}
-        frags.reject(&:nil?).reject(&:empty?).join(' ')
+      def self.format(n)
+        [n.first, n.middle, n.last, n.suffix].reject{|f| (f || "").empty?}.join(' ')
       end
 
     end
