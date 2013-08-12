@@ -4,10 +4,12 @@ Nomen
 [![Gem Version](https://badge.fury.io/rb/nomen.png)][gem]
 [![Build Status](https://secure.travis-ci.org/abevoelker/nomen.png?branch=master)][travis]
 [![Dependency Status](https://gemnasium.com/abevoelker/nomen.png)][gemnasium]
+[![Code Climate](https://codeclimate.com/github/abevoelker/nomen.png)][codeclimate]
 
 [gem]: https://rubygems.org/gems/nomen
 [travis]: http://travis-ci.org/abevoelker/nomen
 [gemnasium]: https://gemnasium.com/abevoelker/nomen
+[codeclimate]: https://codeclimate.com/github/abevoelker/nomen
 
 Simple library for formatting (and maybe later, parsing) human names.
 
