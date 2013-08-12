@@ -2,15 +2,13 @@ class Nomen
   module Formatters
     class Inverted
 
-      def self.format(name)
-        String.new.tap do |str|
-          tail_frags = [:first, :middle, :suffix].map{|f| name.send(f)}
-          tail_str = tail_frags.reject(&:nil?).reject(&:empty?).join(' ')
+      def self.format(n)
+        tail_str = [n.first, n.middle, n.suffix].reject{|f| (f || "").empty?}.join(' ')
 
-          if name.last && !name.last.empty?
-            str << (tail_str.empty? ? name.last : "#{name.last}, ")
-          end
-          str << tail_str unless tail_str.empty?
+        if (n.last || "").empty?
+          tail_str.empty? ? "" : tail_str
+        else
+          tail_str.empty? ? n.last : "#{n.last}, #{tail_str}"
         end
       end
 
